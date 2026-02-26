@@ -1,0 +1,164 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36" version="29.4.0">
+  <diagram name="Страница-1" id="f11AHA8KxThWaRHI4AdS">
+    <mxGraphModel dx="1472" dy="829" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="poolMain" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#f5f5f5;" value="Бренд &quot;Топтыжка&quot; " vertex="1">
+          <mxGeometry height="630" width="1400" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="laneKsu" parent="poolMain" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=40;horizontal=0;" value="Ксюша (Покупатель)" vertex="1">
+          <mxGeometry height="230" width="1400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="startKsu" parent="laneKsu" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Зашел на сайт" vertex="1">
+          <mxGeometry height="50" width="100" x="50" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="taskViewFlavors" parent="laneKsu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Просматривает все вкусы на главной" vertex="1">
+          <mxGeometry height="50" width="150" x="180" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="taskCheckDetails" parent="laneKsu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Смотрит состав и калории (кнопка &#39;Подробнее&#39;)" vertex="1">
+          <mxGeometry height="50" width="150" x="180" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="taskWhereToBuy" parent="laneKsu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Ищет, где купить (адрес)" vertex="1">
+          <mxGeometry height="50" width="150" x="410" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="taskWhyUs" parent="laneKsu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Читает &#39;Почему выбирают нас&#39;" vertex="1">
+          <mxGeometry height="50" width="150" x="410" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gatewayR2" parent="laneKsu" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Участвовать в конкурсе?" vertex="1">
+          <mxGeometry height="60" width="90" x="620" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="taskSubmitRecipe" parent="laneKsu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Отправляет рецепт (форма)" vertex="1">
+          <mxGeometry height="50" width="150" x="810" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="taskReadReviews" parent="laneKsu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Читает отзывы на странице коктейля" vertex="1">
+          <mxGeometry height="50" width="150" x="810" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="taskSubscribeNews" parent="laneKsu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Подписывается на рассылку (ввод email)" vertex="1">
+          <mxGeometry height="50" width="150" x="989" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="endKsu" parent="laneKsu" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Покинул сайт" vertex="1">
+          <mxGeometry height="50" width="100" x="1270" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="dataEmail" parent="laneKsu" style="note;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="База email-ов" vertex="1">
+          <mxGeometry height="40" width="100" x="1014" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1" edge="1" parent="laneKsu" source="startKsu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskViewFlavors" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" edge="1" parent="laneKsu" source="taskViewFlavors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskCheckDetails" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" edge="1" parent="laneKsu" source="taskCheckDetails" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskWhereToBuy" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" edge="1" parent="laneKsu" source="taskWhereToBuy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskWhyUs" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5" edge="1" parent="laneKsu" source="taskWhyUs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="gatewayR2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow6" edge="1" parent="laneKsu" source="gatewayR2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskSubmitRecipe" value="Да">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="50" as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow7" edge="1" parent="laneKsu" source="gatewayR2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskReadReviews" value="Нет">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="125" as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow8" edge="1" parent="laneKsu" source="taskSubmitRecipe" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskSubscribeNews" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow9" edge="1" parent="laneKsu" source="taskReadReviews" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskSubscribeNews" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow10" edge="1" parent="laneKsu" source="taskSubscribeNews" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="endKsu" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="laneMaria" parent="poolMain" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=40;horizontal=0;" value="Мария (Менеджер)" vertex="1">
+          <mxGeometry height="150" width="1400" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="taskPublishNews" parent="laneMaria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Публикует новости/акции" vertex="1">
+          <mxGeometry height="50" width="150" x="90" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dataNews" parent="laneMaria" style="note;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="База новостей" vertex="1">
+          <mxGeometry height="40" width="100" x="320" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="taskCollectRecipes" parent="laneMaria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Собирает рецепты (конкурс)" vertex="1">
+          <mxGeometry height="50" width="150" x="810" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dataRecipe" parent="laneMaria" style="note;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="Хранилище рецептов" vertex="1">
+          <mxGeometry height="40" width="100" x="1040" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="flow11" edge="1" parent="laneMaria" source="taskPublishNews" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dataNews" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow16" edge="1" parent="laneMaria" source="taskCollectRecipes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dataRecipe" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="laneIgor" parent="poolMain" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=40;horizontal=0;" value="Игорь (Партнёр)" vertex="1">
+          <mxGeometry height="210" width="1400" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="startIgor" parent="laneIgor" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Заинтересован в сотрудничестве" vertex="1">
+          <mxGeometry height="50" width="140" x="70" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="taskPartnerForm" parent="laneIgor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Заполняет форму &#39;Стать партнером&#39;" vertex="1">
+          <mxGeometry height="50" width="150" x="270" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="dataPartners" parent="laneIgor" style="note;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="CRM Партнеров" vertex="1">
+          <mxGeometry height="40" width="100" x="600" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="taskFollowSocials" parent="laneIgor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Переходит в соцсети по ссылкам в подвале" vertex="1">
+          <mxGeometry height="50" width="150" x="800" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="endIgor" parent="laneIgor" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Завершил взаимодействие" vertex="1">
+          <mxGeometry height="50" width="120" x="1160" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="flow12" edge="1" parent="laneIgor" source="startIgor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskPartnerForm" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow13" edge="1" parent="laneIgor" source="taskPartnerForm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dataPartners" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow14" edge="1" parent="laneIgor" source="dataPartners" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="taskFollowSocials" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow15" edge="1" parent="laneIgor" source="taskFollowSocials" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="endIgor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg1" edge="1" parent="1" source="taskSubmitRecipe" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=12 12;strokeColor=#0000FF;fontColor=#0000FF;" target="taskCollectRecipes" value="Новый рецепт">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg2" edge="1" parent="1" source="taskPartnerForm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=12 12;strokeColor=#0000FF;fontColor=#0000FF;" target="dataPartners" value="Заявка на партнерство">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg3" edge="1" parent="1" source="taskSubscribeNews" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=12 12;strokeColor=#0000FF;fontColor=#0000FF;" target="dataEmail" value="Email для рассылки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1;fontSize=16;" value="ЛЕГЕНДА BPMN:" vertex="1">
+          <mxGeometry height="30" width="150" x="30" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="legend1" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="⚪ Событие (Начало/Конец) - зеленое" vertex="1">
+          <mxGeometry height="20" width="210" x="30" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="▭ Задача (Действие пользователя)" vertex="1">
+          <mxGeometry height="20" width="200" x="30" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="◊ Шлюз (Точка выбора) - оранжевый" vertex="1">
+          <mxGeometry height="20" width="200" x="30" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="legend4" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="➔ Сплошная стрелка: Поток операций" vertex="1">
+          <mxGeometry height="20" width="220" x="250" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="legend5" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#0000FF;" value="- - - ➔ Синяя пунктирная: Поток сообщений" vertex="1">
+          <mxGeometry height="20" width="250" x="250" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="legend6" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="Объект данных (База, хранилище) - красный" vertex="1">
+          <mxGeometry height="30" width="270" x="250" y="775" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
